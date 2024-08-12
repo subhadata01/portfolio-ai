@@ -6,7 +6,7 @@ const sharp = require("sharp");
 const { GoogleGenerativeAI } = require("@google/generative-ai");
 
 
-const genAI = new GoogleGenerativeAI("AIzaSyBr6vD7y2IFUkDV9P6SxxHvWY9uE8W6UvY");
+const genAI = new GoogleGenerativeAI("api_key");
 const model = genAI.getGenerativeModel({ model: "gemini-1.5-pro-latest" });
 
 exports.uploadResume = async (req, res) => {
