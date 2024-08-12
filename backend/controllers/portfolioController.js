@@ -15,6 +15,8 @@ exports.uploadResume = async (req, res) => {
       return res.status(400).send("No file uploaded");
     }
 
+    console.log("request to create a file")
+
     // Save the uploaded PDF to a temporary file
     const tempPdfPath = path.join(__dirname, "temp.pdf");
     path.resolve(process.cwd(), tempPdfPath);
