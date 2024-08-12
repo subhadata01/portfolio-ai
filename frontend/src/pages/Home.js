@@ -28,7 +28,7 @@ const Home = () => {
     formData.append("file", file);
 
     try {
-      const imageResponse = await axios.post("/upload", formData, {
+      const imageResponse = await axios.post("https://portfolio-ai-96ip.vercel.app/upload", formData, {
         headers: {
           "Content-Type": "multipart/form-data",
         },
@@ -40,7 +40,7 @@ const Home = () => {
       // console.log(result.response && result.response.text());
 
       const resumeContextResponse = await axios.post(
-        "/extractResumeContext",
+        "https://portfolio-ai-96ip.vercel.app/extractResumeContext",
         inputArray,
         {
           headers: {
@@ -57,7 +57,7 @@ const Home = () => {
       }
 
       const portfolioResponse = await axios.post(
-        "/getPortfolio",
+        "https://portfolio-ai-96ip.vercel.app/getPortfolio",
         portfolioRequest,
         {
           headers: {
