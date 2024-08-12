@@ -81,7 +81,7 @@ const Home = () => {
       <div id="portfolio_section">
       </div>
       <div className="header">
-        <span className="headerTitle">Profile.ai</span>
+        <span className="headerTitle">Profolio.ai</span>
       </div>
 
       {!portfolio && (
