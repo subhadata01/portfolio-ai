@@ -28,7 +28,7 @@ const Home = () => {
     formData.append("file", file);
 
     try {
-      const imageResponse = await axios.post("https://portfolio-ai-9zes-cl8yls7su-subhas-projects-d50c358f.vercel.app/upload", formData, {
+      const imageResponse = await axios.post("https://portfolio-ai-zt6y.vercel.app/upload", formData, {
         headers: {
           "Content-Type": "multipart/form-data",
         },
@@ -40,7 +40,7 @@ const Home = () => {
       // console.log(result.response && result.response.text());
 
       const resumeContextResponse = await axios.post(
-        "https://portfolio-ai-9zes-cl8yls7su-subhas-projects-d50c358f.vercel.app/extractResumeContext",
+        "https://portfolio-ai-zt6y.vercel.app/extractResumeContext",
         inputArray,
         {
           headers: {
@@ -57,7 +57,7 @@ const Home = () => {
       }
 
       const portfolioResponse = await axios.post(
-        "https://portfolio-ai-9zes-cl8yls7su-subhas-projects-d50c358f.vercel.app/getPortfolio",
+        "https://portfolio-ai-zt6y.vercel.app/getPortfolio",
         portfolioRequest,
         {
           headers: {
