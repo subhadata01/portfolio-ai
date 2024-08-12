@@ -17,6 +17,7 @@ exports.uploadResume = async (req, res) => {
 
     // Save the uploaded PDF to a temporary file
     const tempPdfPath = path.join(__dirname, "temp.pdf");
+    path.resolve(process.cwd(), tempPdfPath);
     fs.writeFileSync(tempPdfPath, req.file.buffer);
 
     // Convert PDF to PNG images
